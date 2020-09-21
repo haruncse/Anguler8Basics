@@ -1,0 +1,7 @@
+<p>product-list works!</p>
+<div *ngFor='let product of products'>
+<h3>{{product.name}}</h3>
+<p *ngIf='product.price < 500'>
+    <button (click)='showCost()' >Low Cost</button>
+</p>
+</div>
