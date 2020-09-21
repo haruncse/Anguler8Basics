@@ -1,7 +1,8 @@
 <p>product-list works!</p>
 <div *ngFor='let product of products'>
-<h3>{{product.name}}</h3>
-<p *ngIf='product.price < 500'>
-    <button (click)='showCost()' >Low Cost</button>
-</p>
+    <a [title]="product.name +' Details'">{{product.name}}</a>
+    <p>
+        <button (click)='productDetails()'>Product Details</button>
+    </p>
+    <app-product-alerts [productData]="product" (notify)="onNotify()"></app-product-alerts>
 </div>

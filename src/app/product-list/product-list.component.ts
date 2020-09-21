@@ -9,8 +9,11 @@ import { products} from '../products';
 export class ProductListComponent implements OnInit {
   products=products;
   constructor() { }
-  showCost(){
-    window.alert("Display Actual Cost.");
+  productDetails(){
+    window.alert("Product Details.");
+  }
+  onNotify(){
+    window.alert("Product Notified.");
   }
   ngOnInit(): void {
   }
